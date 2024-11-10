@@ -150,8 +150,8 @@
 	\pagestyle{estilocapa}
 	\textbf{
 		UNIVERSIDADE FEDERAL DE MINAS GERAIS\\
-		Instituto de Ciências Exatas\\
-		Programa de Pós-Graduação em Ciência da Computação\\
+		Escola de Engenharia\\
+		Departamento de Engenharia Eletrônica\\
 	}
 	
 	\vspace{5cm}

@@ -1,14 +1,14 @@
 \documentclass[
 %	msc, %% Para dissertações de mestrado, OU
 %	mscproposta, %% Para propostas de dissertação de mestrado, OU
-	phd, %% Para teses de doutorado, OU
+%	phd, %% Para teses de doutorado, OU
 %	phdproposta, %% Para propostas de tese de doutorado
 	portugues %% Para documentos em português, OU
 %	english %% Para documentos em inglês
 ]{./ppgccufmg}
 
-%\usepackage[brazil]{babel} %% se o documento for em português, OU
-\usepackage[english]{babel} %% se o documento for em inglês
+\usepackage[brazil]{babel} %% se o documento for em português, OU
+%\usepackage[english]{babel} %% se o documento for em inglês
 %\usepackage[latin1]{inputenc}
 \usepackage{natbib}
 \usepackage{xcolor}
@@ -22,16 +22,16 @@
 
 %% Exemplo 1 de lista customizada: Glossário ==================
 
-\newcommand{\glossario}{
-	\chapter*{List of Abbreviations and Acronyms}
+% \newcommand{\glossario}{
+% 	\chapter*{List of Abbreviations and Acronyms}
 	
-	\begin{tabular}{ll}
-		BFS & \textit{Breadth-First Search}\\
-		BOW & \textit{Bag of Words} \\
-		TXT & \textit{Text File Format}\\
-		UFMG & Universidade Federal de Minas Gerais
-	\end{tabular}
-}
+% 	\begin{tabular}{ll}
+% 		BFS & \textit{Breadth-First Search}\\
+% 		BOW & \textit{Bag of Words} \\
+% 		TXT & \textit{Text File Format}\\
+% 		UFMG & Universidade Federal de Minas Gerais
+% 	\end{tabular}
+% }
 
 %% **** Caso não haja nenhuma lista adicional, os comandos acima podem ser apagados. ****
 %% ===============================================
@@ -53,46 +53,64 @@
 
 \begin{document}
 	\ppgccufmg{
-		autor={Alan Turing}, %% Autor(a)
-		titulo={Systems of Logic Based on Ordinals}, %% Título
+		autor={Eduardo, Iago, Julia, Julio}, %% Autor(a)
+		titulo={MOSFETs de Potência}, %% Título
 		cidade={Belo Horizonte},
-		ano={2022},
+		ano={2024},
 		versao={Final}, %% Versão do documento
 %		orientador={Fulano de tal}, %% Para masculino
-		orientadora={Fulana de Tal}, %% Para feminino
+		orientadora={}, %% Para feminino
 %		coorientador={Ciclano}, %% Para masculino
-		coorientadora={Ciclana}, %% Para feminino
-		fichacatalografica={fichacatalografica.pdf},
-		folhadeaprovacao={folhadeaprovacao.pdf},
+		coorientadora={}, %% Para feminino
+%		fichacatalografica={fichacatalografica.pdf},
+%		folhadeaprovacao={folhadeaprovacao.pdf},
 		resumo={resumo.tex}, %% Resumo em português
 		abstracten={abstract.tex}, %% Abstract em inglês
 		palavraschave={Matemática. Computação.}, %% Palavras-chave do resumo
 		keywords={Math. Computing.}, %% Palavras-chave do abstract
 		dedicatoria={dedicatoria.tex}, %% Arquivo .tex contendo a dedicatória
 		agradecimentos={agradecimentos.tex},
-		epigrafe={Truth and lie are opposite things.},
-		epigrafeautor={Unkown},
+		epigrafe={},
+		epigrafeautor={},
 		listadefiguras={sim}, %% Remova (ou comente) este parâmetro para remover a lista de figuras
 		listadetabelas={sim}, %% Remova (ou comente) este parâmetro para remover a lista de tabelas
-		listascustomizadas={\glossario} %% Lista customizada (e.g., glossário, lista de algoritmos). 
+		% listascustomizadas={\glossario} %% Lista customizada (e.g., glossário, lista de algoritmos). 
 	}
 	
-	\chapter{Introdução}
-		Exemplo de nota de rodapé \footnote{Aqui está uma nota de rodapé e uma url: \url{https://dcc.ufmg.br}}.
-		\lipsum[1-4]
+	\chapter{O MOSFET}
+		Aqui, podemos dar uma breve introdução sobre MOSFETs, falando sobre aplicações comuns.
 		
-		\section{Motivação}
-			\lipsum[4-5]
+		\section{Funcionamento}
+			Aqui, vamos explicar, a nível de materiais semicondutores, como funciona um MOSFET. Basicamente, revisar o que foi dado em aula.
 			   
-			\subsection{Sub-motivação}
-				\lipsum[6-7]
-			\subsection{Mais uma sub-motivação}
-				\lipsum[8-9]
-				\subsubsection{Uma sub-sub-motivação}
-					\lipsum[10-11]
+			\subsection{Sub-seção}
+			se precisar
+				\subsubsection{Uma sub-sub-seção}
+					idem
+
+		\section{Parâmetros}
+			Imagino que convenha usar uma tabela.
+
+			\begin{table}[ht]
+				\centering
+				\begin{tabular}{|c|c|c|c|c|}
+				\hline
+								& I & V & P & T\textsubscript{j} \\ \hline
+				Típico	&   &   &   &										 \\ \hline
+				Máximo	&   &   &   &										 \\ \hline
+				\end{tabular}
+				\caption{Parâmetros para MOSFETs convencionais}
+				\label{tab:mosfet_convencional_param}
+			\end{table}
+
+		\section{Implicações de Ultrapassar os Parâmetros Máximos}
+			Explicar, a nível de semicondutores, o que acontece.
+
+	\chapter{O MOSFET de Potência}
+		
 	
-	\chapter{Desenvolvimento}
-		\lipsum[1-4]
+	% \chapter{Desenvolvimento}
+	% 	\lipsum[1-4]
 		
 %		Exemplo de algoritmo ==============================
 %		\begin{algoritmo}
@@ -110,33 +128,33 @@
 %		\end{algoritmo}
 %		===============================================
 		
-		\begin{figure}[ht]
-			\centering
-			\caption{Prédio do DCC em 2016.}
-			\label{fig:exemplo}
-			\includegraphics[width=\textwidth]{img/dcc.jpg}
-			\small{Fonte:~\url{http://40anos.dcc.ufmg.br/galeria}}
-		\end{figure}
+		% \begin{figure}[ht]
+		% 	\centering
+		% 	\caption{Prédio do DCC em 2016.}
+		% 	\label{fig:exemplo}
+		% 	\includegraphics[width=\textwidth]{img/dcc.jpg}
+		% 	\small{Fonte:~\url{http://40anos.dcc.ufmg.br/galeria}}
+		% \end{figure}
 	
-		\lipsum[5]
+		% \lipsum[5]
 		
-		\begin{table}[ht]
-			\centering
-			\begin{tabular}{c|ccccccccl}
-				Natural & \multicolumn{9}{c}{Real}   \\ \hline
-				1 & 0.  & {\color{red} 2}  & 3   & 6   & 4   & 3   & 6   & 7   & $\ldots$ \\
-				2  & 0.  & 0   & {\color{red} 9}  & 8   & 4   & 7   & 3   & 2   & $\ldots$ \\
-				3  & 0.  & 1   & 9   & {\color{red} 3}  & 2   & 1   & 4   & 0   & $\ldots$ \\
-				4  & 0.  & 8   & 4   & 3   & {\color{red} 2}  & 7   & 9   & 2   & $\ldots$ \\
-				5  & 0.  & 0   & 1   & 2   & 9   & {\color{red} 3}  & 4   & 8   & $\ldots$ \\
-				6  & 0.  & 2   & 8   & 2   & 6   & 5   & {\color{red} 8}  & 3   & $\ldots$ \\
-				7  & 0.  & 0   & 2   & 1   & 5   & 3   & 7   & {\color{red} 4}  & $\ldots$ \\
-				$\vdots$ & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\ddots$ \\ \hline
-				\multicolumn{1}{l|}{} & \multicolumn{1}{l}{0.} & \multicolumn{1}{l}{{\color{red} 2}} & \multicolumn{1}{l}{{\color{red} 9}} & \multicolumn{1}{l}{{\color{red} 3}} & \multicolumn{1}{l}{{\color{red} 2}} & \multicolumn{1}{l}{{\color{red} 3}} & \multicolumn{1}{l}{{\color{red} 8}} & \multicolumn{1}{l}{{\color{red} 4}} & $\ldots$
-			\end{tabular}
-			\caption{Cantor: Existem infinitos diferentes!}
-			\label{tab:exemplo}
-		\end{table}
+		% \begin{table}[ht]
+		% 	\centering
+		% 	\begin{tabular}{c|ccccccccl}
+		% 		Natural & \multicolumn{9}{c}{Real}   \\ \hline
+		% 		1 & 0.  & {\color{red} 2}  & 3   & 6   & 4   & 3   & 6   & 7   & $\ldots$ \\
+		% 		2  & 0.  & 0   & {\color{red} 9}  & 8   & 4   & 7   & 3   & 2   & $\ldots$ \\
+		% 		3  & 0.  & 1   & 9   & {\color{red} 3}  & 2   & 1   & 4   & 0   & $\ldots$ \\
+		% 		4  & 0.  & 8   & 4   & 3   & {\color{red} 2}  & 7   & 9   & 2   & $\ldots$ \\
+		% 		5  & 0.  & 0   & 1   & 2   & 9   & {\color{red} 3}  & 4   & 8   & $\ldots$ \\
+		% 		6  & 0.  & 2   & 8   & 2   & 6   & 5   & {\color{red} 8}  & 3   & $\ldots$ \\
+		% 		7  & 0.  & 0   & 2   & 1   & 5   & 3   & 7   & {\color{red} 4}  & $\ldots$ \\
+		% 		$\vdots$ & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\vdots$  & $\ddots$ \\ \hline
+		% 		\multicolumn{1}{l|}{} & \multicolumn{1}{l}{0.} & \multicolumn{1}{l}{{\color{red} 2}} & \multicolumn{1}{l}{{\color{red} 9}} & \multicolumn{1}{l}{{\color{red} 3}} & \multicolumn{1}{l}{{\color{red} 2}} & \multicolumn{1}{l}{{\color{red} 3}} & \multicolumn{1}{l}{{\color{red} 8}} & \multicolumn{1}{l}{{\color{red} 4}} & $\ldots$
+		% 	\end{tabular}
+		% 	\caption{Cantor: Existem infinitos diferentes!}
+		% 	\label{tab:exemplo}
+		% \end{table}
 
 		\section{Usando referências}
 			Segundo \cite{horn86robot}, todo triângulo equilátero tem os lados iguais. Já segundo \cite{shashua97photometric}, todo quadrado também tem.
